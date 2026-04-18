@@ -45,7 +45,7 @@ export default function Navbar({ cartButton }: { cartButton?: React.ReactNode })
 
   useEffect(() => {
     if (!isHome) return
-    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.6)
+    const onScroll = () => setScrolled(window.scrollY > 80)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [isHome])
@@ -240,15 +240,15 @@ export default function Navbar({ cartButton }: { cartButton?: React.ReactNode })
         {/* Right: Icons */}
         <div className="flex items-center gap-5">
           <Link href="/account/wishlist" className="relative hover:opacity-70 transition-opacity" aria-label="Wishlist">
-            <Heart size={23} strokeWidth={1.5} style={{ color: iconColor }} />
+            <Heart size={22} strokeWidth={1.5} style={{ color: iconColor }} />
             {wishlistCount > 0 && (
-              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-orange-500 text-white text-[10px] flex items-center justify-center font-sans font-bold">
+              <span className="absolute -top-1.5 -right-2 min-w-[16px] h-[16px] px-1 rounded-full bg-orange-500 text-white text-[9px] leading-none flex items-center justify-center font-sans font-semibold">
                 {wishlistCount}
               </span>
             )}
           </Link>
           <Link href="/login" className="hover:opacity-70 transition-opacity" aria-label="Account" style={{ color: iconColor }}>
-            <User size={23} strokeWidth={1.5} />
+            <User size={22} strokeWidth={1.5} />
           </Link>
           <div className="hover:opacity-70 transition-opacity" style={{ color: iconColor }}>
             {cartButton}

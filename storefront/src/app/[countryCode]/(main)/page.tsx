@@ -5,6 +5,7 @@ import ShippingBanner from "@components-custom/shipping-banner"
 import ProductGrid from "@components-custom/product-grid"
 import MarqueeStrip from "@components-custom/marquee-strip"
 import GardenEditorial from "@components-custom/garden-editorial"
+import OurRange from "@components-custom/our-range"
 
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
@@ -82,6 +83,7 @@ export default async function Home(props: {
       />
       <MarqueeStrip />
       <GardenEditorial />
+      <OurRange />
       <ProductGrid
         title="Garden adventures"
         linkLabel="View collection"
