@@ -6,11 +6,11 @@ export default function GardenEditorial() {
   const [btnHovered, setBtnHovered] = useState(false)
 
   return (
-    <section className="w-full flex flex-col md:flex-row" style={{ backgroundColor: 'var(--sage)' }}>
+    <section className="w-full flex flex-col md:flex-row min-h-[560px] md:min-h-[720px]" style={{ backgroundColor: 'var(--sage)' }}>
       {/* Left: editorial image */}
-      <div className="md:w-1/2 aspect-square md:aspect-auto min-h-[420px] overflow-hidden relative">
+      <div className="md:w-1/2 aspect-[4/5] md:aspect-auto overflow-hidden relative">
         <img
-          src="/placeholder.svg?height=700&width=700"
+          src="/placeholder.svg?height=900&width=900"
           alt="Child playing with a garden playhouse surrounded by flowers and plants"
           className="w-full h-full object-cover"
         />

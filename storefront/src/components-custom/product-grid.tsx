@@ -25,9 +25,9 @@ export default function ProductGrid({ title, linkLabel, products }: ProductGridP
   const [arrowHovered, setArrowHovered] = useState(false)
 
   return (
-    <section className="w-full px-6 md:px-10 py-10 bg-background">
+    <section className="w-full px-6 md:px-10 py-14 md:py-16 bg-background">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-8">
         <h2 className="text-3xl md:text-4xl font-light text-foreground font-serif">
           {title}
         </h2>
@@ -53,7 +53,7 @@ export default function ProductGrid({ title, linkLabel, products }: ProductGridP
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
         {products.map((product, i) => (
           <ProductCard
             key={i}
